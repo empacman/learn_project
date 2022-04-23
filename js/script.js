@@ -1,11 +1,22 @@
  "use strict";
- let a = 5,     
-     d = 6;
+let numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", " "),
 
- console.log(a++);
- console.log(d--);
+    personalMovieDB = {
+        "count" : numberOfFilms,
+        "movies" : {},
+        "actors" : {},
+        "genres" : [],
+        "privat" : false
+    };
 
- console.log(a);
- console.log(d);
+let lastFilm = prompt("Один из последних просмотренных фильмов?", " ");
+let rateFilm = prompt("Насколько оцените его?", " ");
 
- console.log(d);
+personalMovieDB.movies[lastFilm] = rateFilm;
+
+let lastFilm2 = prompt("Один из последних просмотренных фильмов?", " ");
+let rateFilm2 = prompt("Насколько оцените его?", " ");
+
+personalMovieDB.movies[lastFilm2] = rateFilm2;
+
+console.log(personalMovieDB);
